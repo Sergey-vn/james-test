@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Currency Solutions Management System</title>
+		
+		<meta name="description" content="">
+		
+		<!-- Mobile-friendly viewport -->
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+
+		<!-- Style sheet link -->
+		<link href="css/main.css" rel="stylesheet" media="all">
+
+	</head>
+
+	<body>
+		<!-- modal window section-->
+		<div class="modal">
+
+			<!-- get center position -->
+			<div class="wrapper">
+
+				<!-- modal window container -->
+				<div class="modal_container">
+
+					<div class="general_info">
+
+						<!-- account information section -->
+						<section id="step1_account" class="modal_account">
+
+							<div class="hero">
+								<h1>{{ name }}</h1>
+								<h2 class="title">{{ type }} account</h2>
+							</div>
+
+							<div class="main_info">
+								<div class="company_data">
+									<a href="tel:+{{ phone }}" class="phone no-link">{{ phone }}</a>
+									<br>
+									<a href="#" class="reg_number">SC122323XE</a>
+									<div class="net_position">NP: <strong class="money_value">${{ net_position }}</strong></div>
+								</div>
+
+								<div class="contact_person">
+									<div class="title">Main Contact <i class="sprite-user"></i></div>
+									<div class="name"><strong>{{ main_contact.name }}</strong></div>
+									<div class="position">{{ main_contact.position }}</div>
+								</div>
+							</div>
+
+							<div class="additional_info">
+								<div class="dealer">
+									<div class="title">Dealer</div>
+									<div class="name">{{ dealer }}</div>
+								</div>
+								<div class="last_login">
+									<div class="title">Last Login</div>
+									<div class="date">{{ last_login }}</div><!-- need to change format on the server side -->
+								</div>
+								<div class="last_call">
+									<div class="title">Last Call</div>
+									<span class="date">{{ last_call.date}}</span>
+									<span class="name">({{ last_call.contact}})</span>
+								</div>
+							</div>
+						</section>
+
+						<!-- notes section -->
+						<section id="step1_notes" class="modal_notes">
+						<div class="title">Last Notes <i class="sprite-notes"></i></div>
+						{{#.}}
+						<div class="note">
+							<div class="date">{{ date }}</div>
+							<div class="author">{{ author }}:</div>
+							<div class="text">{{ text }}</div>
+						</div>
+						{{/.}}
+					</section>
+
+					</div>
+
+					<!-- active trade section -->
+					<section id="step1_trade" class="modal_trade">
+						<div class="title">Active Trade</div>
+						<div class="trade_id">{{ id }}</div>
+						<div class="trade_details">
+							<div class="buy"><span class="title">Buy</span> <span class="money_value">{{ buy.amount }}</span> {{ buy.currency }}</div>
+							<div class="sell"><span class="title">Sell</span> <span class="money_value">{{ sell.amount }}</span> {{ sell.currency }}</div>
+							<div class="margin"><span class="title">Margin</span> {{ margin }}%</div>
+						</div>
+						<div class="dealer">
+							<div class="title">Dealer</div>
+							{{ dealer }}
+						</div>
+					</section>
+
+					<!-- action buttons section -->
+					<section class="modal_actions">
+						<a href="#" class="btn btn-success">Accept</a>
+						<a href="#" class="btn btn-info">Transfer</a>
+						<a href="#" class="btn btn-danger pull-right">Decline</a>
+					</section>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Javascript file source -->
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
+
+</html>

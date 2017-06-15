@@ -1,0 +1,17 @@
+{
+  "id":"007",
+  "name":"Super Client Company Ltd.",
+  "type":"Corporate",
+  "phone":"01721234567",
+  "net_position":12121.2,
+  "main_contact":{
+    "name":"John Show",
+    "position":"Head of Marketing of The Wall"
+  },
+  "dealer":"Jane Doe",
+  "last_login":"Oct 12   12:45",
+  "last_call":{
+    "date":"Oct 12   12:45",
+    "contact":"Marry Poppins"
+  }
+}

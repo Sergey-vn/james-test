@@ -1,0 +1,24 @@
+/*---- FONTS ----*/
+$font-base              :     'Oxygen', sans-serif;
+$font-size-base			    : 		16px;
+$line-height-base		    : 		24px;
+
+
+/*---- COLORS ----*/
+$blue-overlay           :     rgba(6,40,54,0.9);
+$black                  :     #1e2427;
+$grey                   :     #8e9395;
+$grey-light             :     #e8eff2;
+$blue                   :     #00aaff;
+$blue-highlight         :     darken( $blue, 10%);
+$blue-dark              :     #068ccf;
+$green                  :     #41ce4b;
+$green-highlight        :     darken( $green, 10%);
+$green-dark             :     #38ba41;
+$red                    :     #f65944;
+$red-highlight          :     darken( $red, 10%);
+$red-dark               :     #f2442d;
+
+
+/*---- EFFECTS ----*/
+$transition-base		    : 		0.33s;

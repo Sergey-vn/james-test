@@ -1,0 +1,91 @@
+//.btn
+.btn {
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  height: 43px;
+  line-height: 43px;
+  padding: 0 20px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $font-base;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: inline-block;
+  transition: $transition-base;
+  color: #fff;
+  appearance: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+
+  &:hover, &:active, &:focus, &:active:focus  {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    text-decoration: none;
+  }
+
+  //sizes
+  &.btn-lg {
+    //to do
+  }
+  &.btn-sm {
+    //to do
+  }
+
+  //colors
+  &.btn-success, &.btn-success:active:focus {
+    background: $green;
+    color: #fff;
+    border-color: $green-dark;
+
+    &:active, &:focus, &:active:focus {
+      background: $green;
+      color: #fff;
+    }
+
+    &:hover {
+      background: $green-highlight!important;
+      border-color: transparent;
+    }
+  }
+
+  &.btn-info, &.btn-info:active:focus {
+    background: $blue;
+    color: #fff;
+    border-color: $blue-dark;
+
+    &:active, &:focus, &:active:focus {
+      background: $blue;
+      color: #fff;
+    }
+
+    &:hover {
+      background: $blue-highlight!important;
+      border-color: transparent;
+    }
+  }
+
+  &.btn-danger, &.btn-danger:active:focus {
+    background: $red;
+    color: #fff;
+    border-color: $red-dark;
+
+    &:active, &:focus, &:active:focus {
+      background: $red;
+      color: #fff;
+    }
+
+    &:hover {
+      background: $red-highlight!important;
+      border-color: transparent;
+    }
+  }
+}

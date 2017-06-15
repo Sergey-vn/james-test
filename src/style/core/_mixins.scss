@@ -1,0 +1,35 @@
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Media mixin's
+@mixin tablet () {
+  @media (max-width: 910px) {
+    @content;
+  }
+}
+
+@mixin mobile () {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm () {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+
+
+
+

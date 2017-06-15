@@ -1,0 +1,360 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background: $blue-overlay;
+  
+  @include tablet {
+    position: absolute;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+    @include tablet {
+      transform: none;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      margin-bottom:10px;
+    }
+
+    .modal_container {
+      display: block;
+      margin: 0 auto;
+      width: 906px;
+      padding: 0;
+      box-sizing: border-box;
+      @include clearfix;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.general_info {
+  @include clearfix;
+  width: 656px;
+  float: left;
+  padding-left: 60px;
+  padding-top: 20px;
+  border-right: 6px dotted $grey-light;
+  box-sizing: border-box;
+
+  @include tablet {
+    width: calc( 100% - 250px );
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-left: 35px;
+    border-right: none;
+    border-bottom: 6px dotted $grey-light;
+  }
+}
+
+.modal_account {
+  box-sizing: border-box;
+  margin-bottom: 38px;
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    h1 {
+      display: block;
+      width: 100%;
+      order: 2;
+      margin-top: 5px;
+      font-size: 26px;
+
+      @include mobile-sm {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      display: block;
+      width: 100%;
+      order: 1;
+      color: $grey;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .main_info {
+    margin-bottom: 30px;
+    @include clearfix;
+
+    @include mobile-sm {
+      margin-bottom: 15px;
+    }
+
+    .company_data {
+      float: left;
+      padding-top: 5px;
+      
+      .phone {
+        color: $black;
+        text-decoration: none;
+      }
+      .reg_number {
+        margin-top: 16px;
+        line-height: 18px;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $blue;
+        transition: $transition-base;
+
+        &:hover {
+          border-color: transparent;
+        }
+      }
+      .net_position {
+        margin-top: 17px;
+      }
+    }
+
+    .contact_person {
+      float: right;
+      min-width: 275px;
+      border-left: 1px solid $grey-light;
+      padding-left: 20px;
+      padding-top: 3px;
+      box-sizing: border-box;
+
+      @include mobile-sm {
+        width: 100%;
+        padding-left: 0;
+        border: none;
+        padding-top: 30px;
+        float: left;
+      }
+
+      .title {
+        margin-bottom: 25px;
+
+        @include mobile-sm {
+          margin-bottom: 10px;
+        }
+      }
+
+      .name {
+        margin-bottom: 7px;
+      }
+
+      .position {
+        margin-bottom: 13px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .additional_info {
+    margin-right: 12px;
+    border-top: 1px solid $grey-light;
+    border-bottom: 1px solid $grey-light;
+    padding-top: 9px;
+
+    &>div {
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+
+    .title {
+      margin-bottom: 5px;
+    }
+
+    .date {
+      white-space: pre;
+    }
+
+    .dealer {
+      min-width: 160px;
+    }
+
+    .last_login {
+      min-width: 165px;
+    }
+
+    .last_call {
+
+      .name {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.modal_notes {
+  box-sizing: border-box;
+  padding-bottom: 38px;
+
+  .note {
+    padding-top: 13px;
+    padding-right: 13px;
+    
+    &>div {
+      display: inline-block;
+      min-width: 55px;
+      padding-bottom: 3px;
+    }
+
+    .author {
+      margin-right: 15px;
+    }
+  }
+}
+
+.modal_trade {
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 20px;
+  padding-left: 35px;
+  box-sizing: border-box;
+
+  @include mobile {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  &>.title {
+    @include mobile {
+      width:100%;
+    }
+  }
+
+  .trade_id {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 3px;
+
+    @include mobile {
+      float: left;
+      min-width: 160px;
+    }
+
+    @include mobile-sm {
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+
+  .trade_details {
+    margin-top: 57px;
+    line-height: 36px;
+
+    @include mobile {
+      float: left;
+      margin-top: 0;
+      line-height: 100%;
+      margin-bottom: 10px;
+      margin-right: 55px;
+    }
+
+    @include mobile-sm {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    .bordered {
+      border-bottom: 1px solid $grey-light;
+    }
+
+    .buy {
+      @extend .bordered;
+
+      @include mobile {
+        margin-bottom: 14px;
+        padding-bottom: 6px;
+      }
+    }
+
+    .sell {
+      @extend .bordered;
+
+      @include mobile {
+        margin-bottom: 14px;
+        padding-bottom: 6px;
+      }
+    }
+    
+    .title {
+      min-width: 60px;
+      display: inline-block;
+    }
+  }
+
+  .dealer {
+    margin-top: 40px;
+
+    @include mobile {
+      float: left;
+      margin-top: 0;
+    }
+
+    @include mobile-sm {
+      width: 100%;
+    }
+
+    .title {
+      margin-bottom: 5px;
+
+      @include mobile-sm {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.modal_actions {
+  padding: 15px 55px 20px 60px;
+  background: $grey-light;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include mobile {
+    padding: 15px 35px 20px 35px;
+  }
+
+  .btn {
+    margin-left: 20px;
+    width: 185px;
+
+    @include mobile {
+      width: calc((100% - 40px) /3);
+      display: block;
+      float: left!important;
+      padding: 0 5px;
+    }
+
+    @include mobile-sm {
+      width: 100%;
+      margin: 15px 0 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+}
